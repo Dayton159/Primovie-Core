@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public struct EmptyResponse: Codable {}
+public struct EmptyResponse: Codable { }
 
 public protocol APIRequest {
   associatedtype Response: Codable
