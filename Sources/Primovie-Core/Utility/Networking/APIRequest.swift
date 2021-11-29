@@ -19,7 +19,7 @@ public protocol APIRequest {
   var contentType: String { get }
 }
 
-extension APIRequest {
+public extension APIRequest {
   typealias Response = EmptyResponse
 
   var method: HTTPMethod { .get }
@@ -27,7 +27,7 @@ extension APIRequest {
   var contentType: String { "application/json" }
 }
 
-extension APIRequest {
+public extension APIRequest {
   public func makeURLComponents() -> URLComponents {
     guard var components = URLComponents(string: Environment.baseURL + pathname)
     else { fatalError("Couldn't create URLComponents") }

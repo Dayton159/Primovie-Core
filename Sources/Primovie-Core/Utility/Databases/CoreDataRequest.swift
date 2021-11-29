@@ -13,13 +13,13 @@ public protocol CoreDataRequest {
   var predicate: NSPredicate? { get }
 }
 
-extension CoreDataRequest {
+public extension CoreDataRequest {
   var entityName: String { "CDMovieFavorite"}
   var fetchLimit: Int { 1 }
   var predicate: NSPredicate? { nil }
 }
 
-extension CoreDataRequest {
+public extension CoreDataRequest {
  public func makeFetchRequest() -> NSFetchRequest<NSManagedObject> {
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
     if let predicate = predicate {
