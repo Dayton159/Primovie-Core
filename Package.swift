@@ -13,16 +13,14 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.2.0"),
-         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.4.4")
+         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.2.0")
     ],
     targets: [
         .target(
             name: "Primovie-Core",
             dependencies: [
               "RxSwift",
-              .product(name: "RxCocoa", package: "RxSwift"),
-              "Alamofire"
+              .product(name: "RxCocoa", package: "RxSwift")
             ]),
         .testTarget(
             name: "Primovie-CoreTests",
