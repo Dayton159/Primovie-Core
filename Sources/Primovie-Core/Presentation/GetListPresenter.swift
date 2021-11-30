@@ -27,7 +27,7 @@ where Interactor.Request == Request, Interactor.Response == [Response] {
     return list.value.count
   }
 
-  public func getItemAt(_ index: IndexPath) -> Response {
+  public func getItemAt(_ indexPath: IndexPath) -> Response {
     return self.list.value[indexPath.row]
   }
 
