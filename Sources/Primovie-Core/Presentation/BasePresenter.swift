@@ -13,7 +13,7 @@ public enum NetworkState {
   case error
 }
 
-public class BasePresenter {
+open class BasePresenter {
   let disposeBag  = DisposeBag()
   var state       = PublishSubject<NetworkState>()
   var error       = PublishSubject<String>()
