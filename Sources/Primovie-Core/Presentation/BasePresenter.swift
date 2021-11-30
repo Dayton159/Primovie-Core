@@ -18,5 +18,5 @@ open class BasePresenter {
   public var state       = PublishSubject<NetworkState>()
   public var error       = PublishSubject<String>()
 
-  public init() { }
+  public init() {}
 }
