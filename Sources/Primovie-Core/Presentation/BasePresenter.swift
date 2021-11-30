@@ -14,7 +14,9 @@ public enum NetworkState {
 }
 
 open class BasePresenter {
-  let disposeBag  = DisposeBag()
-  var state       = PublishSubject<NetworkState>()
-  var error       = PublishSubject<String>()
+  public let disposeBag  = DisposeBag()
+  public var state       = PublishSubject<NetworkState>()
+  public var error       = PublishSubject<String>()
+
+  public init() { }
 }
