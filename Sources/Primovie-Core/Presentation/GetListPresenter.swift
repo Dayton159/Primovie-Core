@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Foundation
 
 public class GetListPresenter<Request, Response, Interactor: UseCase>: BasePresenter
 where Interactor.Request == Request, Interactor.Response == [Response] {
@@ -20,6 +21,14 @@ where Interactor.Request == Request, Interactor.Response == [Response] {
 
   public init(useCase: Interactor) {
     _useCase = useCase
+  }
+
+  public var getNumberOfItems: Int {
+    return list.value.count
+  }
+
+  public func getItemAt(_ index: IndexPath) -> Response {
+    return self.list.value[indexPath.row]
   }
 
   public func getList(request: Request?) {
